@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Ordito</title>
+<meta name="description" content="Privacy policy of Ordito BV — how we handle personal data on ordito.eu, in line with the GDPR.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--navy:#0B1029;--navy-mid:#111738;--navy-light:#1a2048;--navy-card:#0f1533;
+--pw:#6B6BCA;--pw-l:#8E8EDF;--pw-dim:rgba(107,107,202,0.15);
+--w:#fff;--w90:rgba(255,255,255,0.9);--w70:rgba(255,255,255,0.7);--w60:rgba(255,255,255,0.6);--w40:rgba(255,255,255,0.4);--w20:rgba(255,255,255,0.2);--w15:rgba(255,255,255,0.15);--w08:rgba(255,255,255,0.08);--w04:rgba(255,255,255,0.04);
+--display:'Playfair Display',Georgia,serif;--body:'Outfit',system-ui,sans-serif;
+--max:1120px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--w);font-family:var(--body);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--pw);color:#fff}
+
+/* GRAIN */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:999;opacity:0.025}
+.grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-repeat:repeat;background-size:256px}
+
+/* SVG LOGO */
+.logo-svg{height:26px;width:auto}
+.logo-svg .bar{fill:var(--pw)}
+.logo-svg .bar-light{fill:var(--pw-l)}
+.logo-svg .wordmark{fill:var(--w);font-family:var(--body);font-weight:500;letter-spacing:0.18em;font-size:18px}
+.footer-logo .bar,.footer-logo .bar-light{opacity:.5}
+.footer-logo .wordmark{opacity:.5}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s}
+nav.scrolled{padding:1rem 3rem;background:rgba(11,16,41,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--w08)}
+.nav-logo a{display:block;line-height:0}
+.nav-links{display:flex;gap:2.5rem;align-items:center}
+.nav-link{color:var(--w60);text-decoration:none;font-size:.82rem;font-weight:400;letter-spacing:.05em;transition:color .3s;position:relative}
+.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--pw);transition:width .3s}
+.nav-link:hover{color:var(--w)}
+.nav-link:hover::after{width:100%}
+.nav-cta{color:var(--pw-l) !important;font-weight:500 !important}
+.nav-cta:hover{color:var(--w) !important}
+.lang-switch{display:flex;align-items:center;gap:.15rem;border:1px solid var(--w15);border-radius:100px;padding:.2rem;margin-left:.5rem}
+.lang-btn{background:none;border:none;color:var(--w60);font-family:var(--body);font-size:.72rem;font-weight:500;letter-spacing:.05em;padding:.3rem .6rem;border-radius:100px;cursor:pointer;transition:all .3s}
+.lang-btn:hover{color:var(--w)}
+.lang-btn.active{background:var(--pw);color:#fff}
+
+/* LEGAL PAGE */
+.legal{max-width:780px;margin:0 auto;padding:10rem 2rem 6rem}
+.legal-label{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--pw);font-weight:500;margin-bottom:1.25rem;display:block}
+.legal h1{font-family:var(--display);font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:400;line-height:1.2;margin-bottom:.75rem}
+.legal-updated{font-size:.82rem;color:var(--w40);margin-bottom:3rem}
+.legal-intro{font-size:1.05rem;color:var(--w70);font-weight:300;line-height:1.8;margin-bottom:3.5rem}
+.legal h2{font-family:var(--display);font-size:1.45rem;font-weight:400;line-height:1.3;margin:3rem 0 1rem}
+.legal h3{font-size:.95rem;font-weight:500;color:var(--pw-l);margin:1.75rem 0 .5rem}
+.legal p{font-size:.92rem;color:var(--w60);font-weight:300;line-height:1.8;margin-bottom:1rem}
+.legal ul{margin:0 0 1rem 1.25rem}
+.legal li{font-size:.92rem;color:var(--w60);font-weight:300;line-height:1.8;margin-bottom:.4rem}
+.legal a{color:var(--pw-l);text-decoration:none;transition:color .3s}
+.legal a:hover{color:var(--w)}
+.legal-card{background:var(--w04);border:1px solid var(--w08);border-radius:16px;padding:1.75rem 2rem;margin:1.25rem 0 1.5rem}
+.legal-card p{margin-bottom:.25rem}
+.legal-card p:last-child{margin-bottom:0}
+
+/* FOOTER */
+footer{border-top:1px solid var(--w08);padding:2.5rem 3rem;display:flex;justify-content:space-between;align-items:center}
+.footer-right{font-size:.75rem;color:var(--w20)}
+.footer-right a{color:var(--w40);text-decoration:none;transition:color .3s}
+.footer-right a:hover{color:var(--w)}
+
+@media(max-width:768px){
+nav{padding:1rem 1.5rem}
+nav.scrolled{padding:.75rem 1.5rem}
+.nav-link:not(.nav-cta){display:none}
+.legal{padding:8rem 1.5rem 4.5rem}
+footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">
+    <a href="index.html" aria-label="Ordito home">
+    <svg class="logo-svg" viewBox="0 0 210 36" height="26" xmlns="http://www.w3.org/2000/svg">
+      <rect class="bar" x="2" y="3" width="3.5" height="30" rx="1.75"/>
+      <rect class="bar" x="8" y="3" width="3.5" height="30" rx="1.75"/>
+      <rect class="bar-light" x="15" y="1" width="5.5" height="34" rx="2.75"/>
+      <rect class="bar" x="24" y="3" width="3.5" height="30" rx="1.75"/>
+      <rect class="bar" x="30" y="3" width="3.5" height="30" rx="1.75"/>
+      <text class="wordmark" x="52" y="24">ORDITO</text>
+    </svg>
+    </a>
+  </div>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+    <a href="index.html#services" class="nav-link" data-i18n="nav.services">Services</a>
+    <a href="index.html#contact" class="nav-link nav-cta" data-i18n="nav.contact">Contact</a>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" class="lang-btn active" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="nl">NL</button>
+      <button type="button" class="lang-btn" data-lang="fr">FR</button>
+    </div>
+  </div>
+</nav>
+
+<!-- PRIVACY POLICY -->
+<main class="legal">
+  <span class="legal-label" data-i18n="pp.label">Legal</span>
+  <h1 data-i18n="pp.title">Privacy Policy</h1>
+  <p class="legal-updated" data-i18n="pp.updated">Last updated: 10 June 2026</p>
+  <p class="legal-intro" data-i18n="pp.intro">Ordito respects your privacy. This policy explains what personal data we process when you visit ordito.eu or contact us, why we process it, and the rights you have under the EU General Data Protection Regulation (GDPR).</p>
+
+  <h2 data-i18n="pp.s1.h">1. Who we are</h2>
+  <p data-i18n="pp.s1.p">Ordito BV is the data controller for the processing described in this policy.</p>
+  <div class="legal-card">
+    <p><strong>Ordito BV</strong></p>
+    <p>Kasteelstraat 9, 3360 Korbeek-Lo, Belgium</p>
+    <p data-i18n="pp.s1.kbo">Enterprise number (KBO/BCE): 0XXX.XXX.XXX</p>
+    <p><a href="mailto:contact@ordito.eu">contact@ordito.eu</a></p>
+  </div>
+
+  <h2 data-i18n="pp.s2.h">2. What personal data we process, and why</h2>
+
+  <h3 data-i18n="pp.s2.a.h">When you contact us</h3>
+  <p data-i18n="pp.s2.a.p">If you reach out to us by email or phone, we process the data you provide: your name, email address, telephone number, company, and the content of your message. We use this information to respond to your enquiry and to follow up on a potential business relationship. Legal basis: taking steps prior to entering into a contract (Art. 6(1)(b) GDPR) and our legitimate interest in responding to business enquiries (Art. 6(1)(f) GDPR).</p>
+
+  <h3 data-i18n="pp.s2.b.h">Website hosting</h3>
+  <p data-i18n="pp.s2.b.p">Our website is hosted by Vercel Inc. When you visit the site, Vercel automatically receives technical data such as your IP address in its server logs, which it uses to deliver the website and protect it against abuse. Legal basis: our legitimate interest in operating a secure and reliable website (Art. 6(1)(f) GDPR).</p>
+
+  <h3 data-i18n="pp.s2.c.h">Fonts</h3>
+  <p data-i18n="pp.s2.c.p">This site loads fonts from Google Fonts. When a page loads, your browser connects to Google's servers, which involves the transmission of your IP address to Google LLC. We use this service to display the site consistently across devices. Legal basis: our legitimate interest in a consistent presentation of the website (Art. 6(1)(f) GDPR).</p>
+
+  <h2 data-i18n="pp.s3.h">3. Cookies and tracking</h2>
+  <p data-i18n="pp.s3.p">This website does not set cookies and does not use analytics, advertising, or tracking technologies. If you switch the site language, your choice is stored locally in your browser (localStorage); this information stays on your device and is never transmitted to us.</p>
+
+  <h2 data-i18n="pp.s4.h">4. Who we share data with</h2>
+  <p data-i18n="pp.s4.p1">We do not sell your personal data. We share it only with the service providers needed to run our website and communications:</p>
+  <ul>
+    <li data-i18n="pp.s4.i1">Vercel Inc. — website hosting</li>
+    <li data-i18n="pp.s4.i2">Google LLC — web fonts</li>
+    <li data-i18n="pp.s4.i3">Microsoft Corporation — business email and document infrastructure (Microsoft 365)</li>
+  </ul>
+  <p data-i18n="pp.s4.p2">These providers are established in the United States. Transfers of personal data to them are safeguarded by the EU–US Data Privacy Framework and/or the European Commission's Standard Contractual Clauses.</p>
+
+  <h2 data-i18n="pp.s5.h">5. How long we keep your data</h2>
+  <p data-i18n="pp.s5.p">We keep contact correspondence only as long as necessary to handle your enquiry and any resulting business relationship, and we delete it when it is no longer needed, unless a legal obligation requires longer storage. Server logs are retained by our hosting provider for a limited period for security purposes.</p>
+
+  <h2 data-i18n="pp.s6.h">6. Your rights</h2>
+  <p data-i18n="pp.s6.p1">Under the GDPR, you have the right to:</p>
+  <ul>
+    <li data-i18n="pp.s6.i1">access the personal data we hold about you</li>
+    <li data-i18n="pp.s6.i2">have inaccurate data rectified</li>
+    <li data-i18n="pp.s6.i3">have your data erased</li>
+    <li data-i18n="pp.s6.i4">restrict the processing of your data</li>
+    <li data-i18n="pp.s6.i5">receive your data in a portable format</li>
+    <li data-i18n="pp.s6.i6">object to processing based on our legitimate interest</li>
+  </ul>
+  <p data-i18n="pp.s6.p2">To exercise any of these rights, email us at <a href="mailto:contact@ordito.eu">contact@ordito.eu</a>. We will respond within one month.</p>
+  <p data-i18n="pp.s6.p3">You also have the right to lodge a complaint with a supervisory authority. In Belgium, this is the Data Protection Authority (Gegevensbeschermingsautoriteit / Autorité de protection des données), Drukpersstraat 35, 1000 Brussels — <a href="https://www.dataprotectionauthority.be" target="_blank" rel="noopener">www.dataprotectionauthority.be</a>.</p>
+
+  <h2 data-i18n="pp.s7.h">7. Changes to this policy</h2>
+  <p data-i18n="pp.s7.p">We may update this policy from time to time, for example when our website or services change. The current version, with its date of last revision, is always available on this page.</p>
+
+  <h2 data-i18n="pp.s8.h">8. Contact</h2>
+  <p data-i18n="pp.s8.p">Questions about privacy or about this policy? Contact Ordito BV at <a href="mailto:contact@ordito.eu">contact@ordito.eu</a>.</p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <svg class="logo-svg footer-logo" viewBox="0 0 210 36" height="20" xmlns="http://www.w3.org/2000/svg">
+    <rect class="bar" x="2" y="3" width="3.5" height="30" rx="1.75"/>
+    <rect class="bar" x="8" y="3" width="3.5" height="30" rx="1.75"/>
+    <rect class="bar-light" x="15" y="1" width="5.5" height="34" rx="2.75"/>
+    <rect class="bar" x="24" y="3" width="3.5" height="30" rx="1.75"/>
+    <rect class="bar" x="30" y="3" width="3.5" height="30" rx="1.75"/>
+    <text class="wordmark" x="52" y="24">ORDITO</text>
+  </svg>
+  <div class="footer-right"><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> &nbsp;·&nbsp; <span data-i18n="footer.rights">© 2026 Ordito. All rights reserved.</span></div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50));
+
+/* ---------- LANGUAGE SWITCHER ---------- */
+const i18n={
+  nl:{
+    "nav.home":"Home","nav.services":"Diensten","nav.contact":"Contact",
+    "footer.privacy":"Privacybeleid","footer.rights":"© 2026 Ordito. Alle rechten voorbehouden.",
+    "pp.label":"Juridisch",
+    "pp.title":"Privacybeleid",
+    "pp.updated":"Laatst bijgewerkt: 10 juni 2026",
+    "pp.intro":"Ordito respecteert uw privacy. Dit beleid legt uit welke persoonsgegevens we verwerken wanneer u ordito.eu bezoekt of contact met ons opneemt, waarom we ze verwerken, en welke rechten u heeft onder de Algemene Verordening Gegevensbescherming (AVG/GDPR).",
+    "pp.s1.h":"1. Wie we zijn",
+    "pp.s1.p":"Ordito BV is de verwerkingsverantwoordelijke voor de verwerkingen die in dit beleid worden beschreven.",
+    "pp.s1.kbo":"Ondernemingsnummer (KBO): 0XXX.XXX.XXX",
+    "pp.s2.h":"2. Welke persoonsgegevens we verwerken, en waarom",
+    "pp.s2.a.h":"Wanneer u contact met ons opneemt",
+    "pp.s2.a.p":"Als u ons per e-mail of telefoon contacteert, verwerken we de gegevens die u verstrekt: uw naam, e-mailadres, telefoonnummer, bedrijf en de inhoud van uw bericht. We gebruiken deze informatie om uw vraag te beantwoorden en om een mogelijke zakelijke relatie op te volgen. Rechtsgrond: maatregelen vóór de sluiting van een overeenkomst (art. 6, lid 1, b) AVG) en ons gerechtvaardigd belang om zakelijke vragen te beantwoorden (art. 6, lid 1, f) AVG).",
+    "pp.s2.b.h":"Hosting van de website",
+    "pp.s2.b.p":"Onze website wordt gehost door Vercel Inc. Wanneer u de site bezoekt, ontvangt Vercel automatisch technische gegevens zoals uw IP-adres in zijn serverlogboeken, die het gebruikt om de website te leveren en te beschermen tegen misbruik. Rechtsgrond: ons gerechtvaardigd belang om een veilige en betrouwbare website aan te bieden (art. 6, lid 1, f) AVG).",
+    "pp.s2.c.h":"Lettertypes",
+    "pp.s2.c.p":"Deze site laadt lettertypes via Google Fonts. Bij het laden van een pagina maakt uw browser verbinding met de servers van Google, waarbij uw IP-adres wordt doorgegeven aan Google LLC. We gebruiken deze dienst om de site op alle toestellen consistent weer te geven. Rechtsgrond: ons gerechtvaardigd belang in een consistente weergave van de website (art. 6, lid 1, f) AVG).",
+    "pp.s3.h":"3. Cookies en tracking",
+    "pp.s3.p":"Deze website plaatst geen cookies en gebruikt geen analytics-, advertentie- of trackingtechnologieën. Als u de taal van de site wijzigt, wordt uw keuze lokaal in uw browser opgeslagen (localStorage); deze informatie blijft op uw toestel en wordt nooit naar ons verzonden.",
+    "pp.s4.h":"4. Met wie we gegevens delen",
+    "pp.s4.p1":"We verkopen uw persoonsgegevens niet. We delen ze enkel met de dienstverleners die nodig zijn om onze website en communicatie te laten werken:",
+    "pp.s4.i1":"Vercel Inc. — hosting van de website",
+    "pp.s4.i2":"Google LLC — weblettertypes",
+    "pp.s4.i3":"Microsoft Corporation — zakelijke e-mail- en documenteninfrastructuur (Microsoft 365)",
+    "pp.s4.p2":"Deze dienstverleners zijn gevestigd in de Verenigde Staten. Doorgiften van persoonsgegevens aan hen worden beschermd door het EU-VS Data Privacy Framework en/of de standaardcontractbepalingen van de Europese Commissie.",
+    "pp.s5.h":"5. Hoe lang we uw gegevens bewaren",
+    "pp.s5.p":"We bewaren contactcorrespondentie slechts zolang als nodig is om uw vraag en een eventuele daaruit voortvloeiende zakelijke relatie te behandelen, en we verwijderen ze wanneer ze niet langer nodig zijn, tenzij een wettelijke verplichting een langere bewaring vereist. Serverlogboeken worden door onze hostingprovider gedurende een beperkte periode bewaard voor beveiligingsdoeleinden.",
+    "pp.s6.h":"6. Uw rechten",
+    "pp.s6.p1":"Onder de AVG heeft u het recht om:",
+    "pp.s6.i1":"inzage te krijgen in de persoonsgegevens die we over u bewaren",
+    "pp.s6.i2":"onjuiste gegevens te laten verbeteren",
+    "pp.s6.i3":"uw gegevens te laten wissen",
+    "pp.s6.i4":"de verwerking van uw gegevens te laten beperken",
+    "pp.s6.i5":"uw gegevens in een overdraagbaar formaat te ontvangen",
+    "pp.s6.i6":"bezwaar te maken tegen verwerking op basis van ons gerechtvaardigd belang",
+    "pp.s6.p2":"Om een van deze rechten uit te oefenen, mailt u ons op <a href=\"mailto:contact@ordito.eu\">contact@ordito.eu</a>. We antwoorden binnen één maand.",
+    "pp.s6.p3":"U heeft ook het recht om een klacht in te dienen bij een toezichthoudende autoriteit. In België is dat de Gegevensbeschermingsautoriteit, Drukpersstraat 35, 1000 Brussel — <a href=\"https://www.gegevensbeschermingsautoriteit.be\" target=\"_blank\" rel=\"noopener\">www.gegevensbeschermingsautoriteit.be</a>.",
+    "pp.s7.h":"7. Wijzigingen aan dit beleid",
+    "pp.s7.p":"We kunnen dit beleid van tijd tot tijd bijwerken, bijvoorbeeld wanneer onze website of diensten veranderen. De actuele versie, met de datum van de laatste herziening, is steeds beschikbaar op deze pagina.",
+    "pp.s8.h":"8. Contact",
+    "pp.s8.p":"Vragen over privacy of over dit beleid? Contacteer Ordito BV via <a href=\"mailto:contact@ordito.eu\">contact@ordito.eu</a>."
+  },
+  fr:{
+    "nav.home":"Accueil","nav.services":"Services","nav.contact":"Contact",
+    "footer.privacy":"Politique de confidentialité","footer.rights":"© 2026 Ordito. Tous droits réservés.",
+    "pp.label":"Mentions légales",
+    "pp.title":"Politique de confidentialité",
+    "pp.updated":"Dernière mise à jour : 10 juin 2026",
+    "pp.intro":"Ordito respecte votre vie privée. Cette politique explique quelles données personnelles nous traitons lorsque vous visitez ordito.eu ou nous contactez, pourquoi nous les traitons, et les droits dont vous disposez en vertu du Règlement général sur la protection des données (RGPD).",
+    "pp.s1.h":"1. Qui sommes-nous",
+    "pp.s1.p":"Ordito BV est le responsable du traitement pour les traitements décrits dans cette politique.",
+    "pp.s1.kbo":"Numéro d'entreprise (BCE) : 0XXX.XXX.XXX",
+    "pp.s2.h":"2. Quelles données personnelles nous traitons, et pourquoi",
+    "pp.s2.a.h":"Lorsque vous nous contactez",
+    "pp.s2.a.p":"Si vous nous contactez par e-mail ou par téléphone, nous traitons les données que vous fournissez : votre nom, adresse e-mail, numéro de téléphone, entreprise et le contenu de votre message. Nous utilisons ces informations pour répondre à votre demande et assurer le suivi d'une relation commerciale potentielle. Base juridique : mesures précontractuelles (art. 6, par. 1, b) RGPD) et notre intérêt légitime à répondre aux demandes professionnelles (art. 6, par. 1, f) RGPD).",
+    "pp.s2.b.h":"Hébergement du site",
+    "pp.s2.b.p":"Notre site est hébergé par Vercel Inc. Lorsque vous visitez le site, Vercel reçoit automatiquement des données techniques telles que votre adresse IP dans ses journaux de serveur, qu'il utilise pour fournir le site et le protéger contre les abus. Base juridique : notre intérêt légitime à exploiter un site web sûr et fiable (art. 6, par. 1, f) RGPD).",
+    "pp.s2.c.h":"Polices de caractères",
+    "pp.s2.c.p":"Ce site charge ses polices via Google Fonts. Au chargement d'une page, votre navigateur se connecte aux serveurs de Google, ce qui implique la transmission de votre adresse IP à Google LLC. Nous utilisons ce service pour afficher le site de manière cohérente sur tous les appareils. Base juridique : notre intérêt légitime à une présentation cohérente du site (art. 6, par. 1, f) RGPD).",
+    "pp.s3.h":"3. Cookies et traçage",
+    "pp.s3.p":"Ce site ne dépose aucun cookie et n'utilise aucune technologie d'analyse, de publicité ou de traçage. Si vous changez la langue du site, votre choix est enregistré localement dans votre navigateur (localStorage) ; cette information reste sur votre appareil et ne nous est jamais transmise.",
+    "pp.s4.h":"4. Avec qui nous partageons les données",
+    "pp.s4.p1":"Nous ne vendons pas vos données personnelles. Nous les partageons uniquement avec les prestataires nécessaires au fonctionnement de notre site et de nos communications :",
+    "pp.s4.i1":"Vercel Inc. — hébergement du site",
+    "pp.s4.i2":"Google LLC — polices web",
+    "pp.s4.i3":"Microsoft Corporation — infrastructure d'e-mail et de documents (Microsoft 365)",
+    "pp.s4.p2":"Ces prestataires sont établis aux États-Unis. Les transferts de données personnelles vers ceux-ci sont encadrés par le cadre de protection des données UE–États-Unis (Data Privacy Framework) et/ou les clauses contractuelles types de la Commission européenne.",
+    "pp.s5.h":"5. Durée de conservation de vos données",
+    "pp.s5.p":"Nous conservons la correspondance uniquement le temps nécessaire au traitement de votre demande et d'une éventuelle relation commerciale qui en découle, et nous la supprimons lorsqu'elle n'est plus nécessaire, sauf si une obligation légale impose une conservation plus longue. Les journaux de serveur sont conservés par notre hébergeur pendant une période limitée à des fins de sécurité.",
+    "pp.s6.h":"6. Vos droits",
+    "pp.s6.p1":"En vertu du RGPD, vous avez le droit :",
+    "pp.s6.i1":"d'accéder aux données personnelles que nous détenons à votre sujet",
+    "pp.s6.i2":"de faire rectifier des données inexactes",
+    "pp.s6.i3":"de faire effacer vos données",
+    "pp.s6.i4":"de faire limiter le traitement de vos données",
+    "pp.s6.i5":"de recevoir vos données dans un format portable",
+    "pp.s6.i6":"de vous opposer au traitement fondé sur notre intérêt légitime",
+    "pp.s6.p2":"Pour exercer l'un de ces droits, écrivez-nous à <a href=\"mailto:contact@ordito.eu\">contact@ordito.eu</a>. Nous répondrons dans un délai d'un mois.",
+    "pp.s6.p3":"Vous avez également le droit d'introduire une réclamation auprès d'une autorité de contrôle. En Belgique, il s'agit de l'Autorité de protection des données, Rue de la Presse 35, 1000 Bruxelles — <a href=\"https://www.autoriteprotectiondonnees.be\" target=\"_blank\" rel=\"noopener\">www.autoriteprotectiondonnees.be</a>.",
+    "pp.s7.h":"7. Modifications de cette politique",
+    "pp.s7.p":"Nous pouvons mettre à jour cette politique de temps à autre, par exemple lorsque notre site ou nos services évoluent. La version en vigueur, avec sa date de dernière révision, est toujours disponible sur cette page.",
+    "pp.s8.h":"8. Contact",
+    "pp.s8.p":"Des questions sur la confidentialité ou sur cette politique ? Contactez Ordito BV à <a href=\"mailto:contact@ordito.eu\">contact@ordito.eu</a>."
+  }
+};
+const i18nDefaults={};
+document.querySelectorAll('[data-i18n]').forEach(el=>{i18nDefaults[el.getAttribute('data-i18n')]=el.innerHTML});
+function setLang(lang){
+  const dict=lang==='en'?i18nDefaults:i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    const val=(dict&&dict[key]!==undefined)?dict[key]:i18nDefaults[key];
+    if(val!==undefined)el.innerHTML=val;
+  });
+  document.documentElement.lang=lang;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.getAttribute('data-lang')===lang));
+  try{localStorage.setItem('ordito-lang',lang)}catch(e){}
+}
+document.querySelectorAll('.lang-btn').forEach(b=>{b.addEventListener('click',()=>setLang(b.getAttribute('data-lang')))});
+try{const saved=localStorage.getItem('ordito-lang');if(saved&&saved!=='en'&&i18n[saved])setLang(saved)}catch(e){}
+</script>
+</body>
+</html>
