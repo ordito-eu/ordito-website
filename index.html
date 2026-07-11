@@ -3,15 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ordito — Procurement Value Creation</title>
+<title>Ordito — Procurement Value Creation for Mid-Sized Industrial Companies</title>
 <meta name="description" content="Ordito helps mid-sized industrial companies unlock procurement savings through strategic sourcing programs and procurement solutions.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Ordito BV">
+<link rel="canonical" href="https://ordito.eu/">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#021637">
+
+<!-- Open Graph (social sharing previews) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ordito">
+<meta property="og:title" content="Ordito — Procurement Value Creation">
+<meta property="og:description" content="We help mid-sized industrial companies deliver measurable procurement savings — and build the solutions to sustain them over time.">
+<meta property="og:url" content="https://ordito.eu/">
+<meta property="og:image" content="https://ordito.eu/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en">
+<meta property="og:locale:alternate" content="nl">
+<meta property="og:locale:alternate" content="fr">
+
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ordito — Procurement Value Creation">
+<meta name="twitter:description" content="We help mid-sized industrial companies deliver measurable procurement savings — and build the solutions to sustain them over time.">
+<meta name="twitter:image" content="https://ordito.eu/og-image.png">
+
+<!-- Structured data: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Ordito",
+  "legalName": "Ordito BV",
+  "vatID": "BE1039.425.670",
+  "address": { "@type": "PostalAddress", "streetAddress": "Kasteelstraat 9", "postalCode": "3360", "addressLocality": "Korbeek-Lo", "addressCountry": "BE" },
+  "url": "https://ordito.eu/",
+  "logo": "https://ordito.eu/logo.png",
+  "image": "https://ordito.eu/og-image.png",
+  "description": "Ordito helps mid-sized industrial companies unlock procurement savings through strategic sourcing programs and procurement solutions.",
+  "areaServed": "Europe",
+  "knowsLanguage": ["en", "nl", "fr"],
+  "founder": [
+    { "@type": "Person", "name": "Cedrick Veryser", "jobTitle": "Co-founder", "email": "cedrick.veryser@ordito.eu" },
+    { "@type": "Person", "name": "Patrick Verheyden", "jobTitle": "Co-founder", "email": "patrick.verheyden@ordito.eu" }
+  ],
+  "contactPoint": [
+    { "@type": "ContactPoint", "contactType": "sales", "email": "cedrick.veryser@ordito.eu", "telephone": "+32495616674", "availableLanguage": ["en", "nl", "fr"] },
+    { "@type": "ContactPoint", "contactType": "sales", "email": "patrick.verheyden@ordito.eu", "telephone": "+33637248165", "availableLanguage": ["en", "nl", "fr"] }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
 --navy:#021637;--navy-mid:#082247;--navy-light:#0E2C57;--navy-card:#051E3C;
---pw:#6B84C4;--pw-l:#6B84C4;--pw-dim:rgba(107,132,196,0.15);--emph:#6B84C4;
+--pw:#5E77D4;--pw-l:#5E77D4;--pw-dim:rgba(94,119,212,0.15);--emph:#5E77D4;
 --w:#E6EBF5;--w90:rgba(230,235,245,0.9);--w70:rgba(230,235,245,0.72);--w60:rgba(230,235,245,0.58);--w40:rgba(230,235,245,0.4);--w20:rgba(230,235,245,0.2);--w15:rgba(230,235,245,0.15);--w08:rgba(230,235,245,0.08);--w04:rgba(230,235,245,0.04);
 --display:'Playfair Display',Georgia,serif;--body:'Outfit',system-ui,sans-serif;
 --max:1120px;--ease:cubic-bezier(.22,.61,.36,1);--shadow:0 18px 40px -24px rgba(0,0,0,.55);
@@ -19,11 +74,11 @@
 html{scroll-behavior:smooth}
 body{background:var(--navy);color:var(--w);font-family:var(--body);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 ::selection{background:var(--pw);color:#fff}
-html{scrollbar-width:thin;scrollbar-color:rgba(107,132,196,.45) transparent}
+html{scrollbar-width:thin;scrollbar-color:rgba(94,119,212,.45) transparent}
 ::-webkit-scrollbar{width:10px;height:10px}
 ::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:rgba(107,132,196,.35);border-radius:100px;border:3px solid var(--navy)}
-::-webkit-scrollbar-thumb:hover{background:rgba(107,132,196,.6)}
+::-webkit-scrollbar-thumb{background:rgba(94,119,212,.35);border-radius:100px;border:3px solid var(--navy)}
+::-webkit-scrollbar-thumb:hover{background:rgba(94,119,212,.6)}
 
 /* GRAIN */
 .grain{position:fixed;inset:0;pointer-events:none;z-index:999;opacity:0.025}
@@ -32,7 +87,7 @@ html{scrollbar-width:thin;scrollbar-color:rgba(107,132,196,.45) transparent}
 /* SVG LOGO */
 .logo-svg{height:26px;width:auto}
 .logo-svg .bar{fill:var(--pw)}
-.logo-svg .bar-light{fill:var(--pw-l)}
+.logo-svg .bar-light{fill:#899BF4}
 .logo-svg .wordmark{fill:var(--w);font-family:var(--body);font-weight:500;letter-spacing:0.18em;font-size:18px}
 .footer-logo .bar,.footer-logo .bar-light{opacity:.5}
 .footer-logo .wordmark{opacity:.5}
@@ -60,11 +115,11 @@ section{position:relative}
 .sec-h2{font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;line-height:1.25;letter-spacing:-.015em;margin-bottom:1rem}
 .sec-h2 em{font-style:italic;font-weight:500;color:var(--emph);position:relative;display:inline}
 .sec-sub{font-size:1.05rem;color:var(--w60);max-width:580px;font-weight:300;line-height:1.8;margin-bottom:3rem}
-.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(107,132,196,.28),transparent);box-shadow:0 0 14px rgba(107,132,196,.18);max-width:600px;margin:0 auto}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(94,119,212,.28),transparent);box-shadow:0 0 14px rgba(94,119,212,.18);max-width:600px;margin:0 auto}
 
 /* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;padding:8rem 3rem 6rem;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-20%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(107,132,196,.07) 0%,transparent 70%);pointer-events:none;animation:glow 8s ease-in-out infinite}
+.hero::before{content:'';position:absolute;top:-20%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(94,119,212,.07) 0%,transparent 70%);pointer-events:none;animation:glow 8s ease-in-out infinite}
 .hero-bars{position:absolute;right:8%;top:50%;transform:translateY(-50%);display:flex;gap:14px;height:420px;opacity:0;animation:fadeIn 2s 1s forwards}
 .hero-bar{width:5px;border-radius:100px;background:var(--pw)}
 .hero-bar:nth-child(1){height:40%;opacity:.06;animation:bpulse 7s ease 0s infinite}
@@ -81,7 +136,7 @@ section{position:relative}
 .btn-g{display:inline-flex;align-items:center;gap:.5rem;color:var(--w60);padding:.85rem 1.5rem;text-decoration:none;font-size:.9rem;font-weight:400;transition:all .3s;border-radius:100px;border:1px solid var(--w15)}
 .btn-g:hover{color:var(--w);border-color:var(--w40);background:var(--w04)}
 .hero-stats{position:absolute;bottom:5rem;left:3rem;display:flex;gap:3.5rem;opacity:0;animation:up .8s 1.1s forwards}
-.hstat{padding-left:1.25rem;border-left:2px solid rgba(107,132,196,.3)}
+.hstat{padding-left:1.25rem;border-left:2px solid rgba(94,119,212,.3)}
 .hstat .n{font-family:var(--display);font-size:1.7rem;margin-bottom:.1rem}
 .hstat .l{font-size:.7rem;color:var(--w40);letter-spacing:.08em;text-transform:uppercase}
 
@@ -89,8 +144,8 @@ section{position:relative}
 .problem{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-mid) 100%)}
 .pain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .pain-card{background:var(--w04);border:1px solid var(--w08);border-radius:16px;padding:1.75rem;transition:all .45s var(--ease);position:relative;overflow:hidden}
-.pain-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(107,132,196,.06),transparent);opacity:0;transition:opacity .4s}
-.pain-card:hover{border-color:rgba(107,132,196,.2);transform:translateY(-4px);box-shadow:var(--shadow)}
+.pain-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(94,119,212,.06),transparent);opacity:0;transition:opacity .4s}
+.pain-card:hover{border-color:rgba(94,119,212,.2);transform:translateY(-4px);box-shadow:var(--shadow)}
 .pain-card:hover::before{opacity:1}
 .pain-icon{width:36px;height:36px;border-radius:10px;background:var(--pw-dim);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--pw-l)}
 .pain-card h3{font-size:.95rem;font-weight:500;margin-bottom:.5rem;line-height:1.3}
@@ -100,7 +155,7 @@ section{position:relative}
 .why{background:var(--navy-mid)}
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .pillar{background:var(--navy-card);border:1px solid var(--w08);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;transition:all .45s var(--ease)}
-.pillar:hover{border-color:rgba(107,132,196,.25);transform:translateY(-5px);box-shadow:var(--shadow)}
+.pillar:hover{border-color:rgba(94,119,212,.25);transform:translateY(-5px);box-shadow:var(--shadow)}
 .pillar::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--pw),transparent);opacity:0;transition:opacity .4s}
 .pillar:hover::after{opacity:1}
 .pillar-num{font-size:.7rem;letter-spacing:.15em;color:var(--pw);margin-bottom:1.5rem;font-weight:500}
@@ -112,19 +167,19 @@ section{position:relative}
 .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
 .svc-card{border-radius:20px;padding:3rem;transition:all .45s var(--ease)}
 .svc-card.light{background:var(--w04);border:1px solid var(--w08)}
-.svc-card.dark{background:radial-gradient(130% 90% at 0% 0%,rgba(230,235,245,.05),transparent 55%),linear-gradient(135deg,var(--navy-card),rgba(107,132,196,.08));border:1px solid rgba(107,132,196,.15)}
+.svc-card.dark{background:radial-gradient(130% 90% at 0% 0%,rgba(230,235,245,.05),transparent 55%),linear-gradient(135deg,var(--navy-card),rgba(94,119,212,.08));border:1px solid rgba(94,119,212,.15)}
 .svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .svc-card h3{font-family:var(--display);font-size:1.5rem;font-weight:400;margin-bottom:.5rem}
 .svc-card .svc-sub{font-size:.9rem;color:var(--pw-l);font-weight:500;margin-bottom:1.75rem}
 .svc-item{display:flex;gap:.75rem;margin-bottom:1.25rem;align-items:flex-start}
 .svc-dot{width:8px;height:8px;border-radius:50%;background:var(--pw);flex-shrink:0;margin-top:8px;opacity:.6}
 .svc-item p{font-size:.88rem;color:var(--w60);line-height:1.6;font-weight:300}
-.svc-tag{display:inline-block;margin-top:1.5rem;font-size:.72rem;color:var(--emph);border:1px solid rgba(107,132,196,.35);padding:.35rem 1rem;border-radius:100px;letter-spacing:.04em}
+.svc-tag{display:inline-block;margin-top:1.5rem;font-size:.72rem;color:var(--emph);border:1px solid rgba(94,119,212,.35);padding:.35rem 1rem;border-radius:100px;letter-spacing:.04em}
 
 /* FOUNDERS */
 .founders-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:700px}
 .founder-card{background:var(--w04);border:1px solid var(--w08);border-radius:16px;padding:2rem;transition:all .45s var(--ease)}
-.founder-card:hover{border-color:rgba(107,132,196,.2);transform:translateY(-4px);box-shadow:var(--shadow)}
+.founder-card:hover{border-color:rgba(94,119,212,.2);transform:translateY(-4px);box-shadow:var(--shadow)}
 .founder-avatar{width:56px;height:56px;border-radius:50%;background:var(--pw-dim);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;font-family:var(--display);font-size:1.2rem;color:var(--pw-l)}
 .founder-card h3{font-size:1rem;font-weight:500;margin-bottom:.15rem}
 .founder-card .title{font-size:.8rem;color:var(--pw-l);margin-bottom:.75rem;font-weight:400}
@@ -147,6 +202,8 @@ section{position:relative}
 /* FOOTER */
 footer{border-top:1px solid var(--w08);padding:2.5rem 3rem;display:flex;justify-content:space-between;align-items:center}
 .footer-right{font-size:.75rem;color:var(--w20)}
+.footer-right a{color:var(--w40);text-decoration:none;transition:color .3s}
+.footer-right a:hover{color:var(--w)}
 
 /* SCROLL ANIMATIONS */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
@@ -185,14 +242,14 @@ footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}
 <nav id="nav">
   <div class="nav-logo">
     <svg class="logo-svg" viewBox="0 0 210 36" height="26" xmlns="http://www.w3.org/2000/svg">
-      <!-- Left pair -->
-      <rect class="bar" x="2" y="3" width="3.5" height="30" rx="1.75"/>
-      <rect class="bar" x="8" y="3" width="3.5" height="30" rx="1.75"/>
-      <!-- Center bar (wider, lighter, tallest) -->
-      <rect class="bar-light" x="15" y="1" width="5.5" height="34" rx="2.75"/>
-      <!-- Right pair -->
-      <rect class="bar" x="24" y="3" width="3.5" height="30" rx="1.75"/>
-      <rect class="bar" x="30" y="3" width="3.5" height="30" rx="1.75"/>
+      <!-- Official Ordito mark (exact brand geometry), scaled to nav height -->
+      <g transform="translate(-1.32,-1.76) scale(0.2125)">
+        <rect class="bar" x="15.6" y="13" width="7.3" height="157.6" rx="3.7"/>
+        <rect class="bar" x="48.0" y="22.2" width="11.0" height="141.5" rx="5.5"/>
+        <rect class="bar-light" x="85.0" y="13" width="14.7" height="160.0" rx="7.3"/>
+        <rect class="bar" x="125.7" y="22.2" width="11.0" height="141.5" rx="5.5"/>
+        <rect class="bar" x="162.0" y="13" width="7.2" height="157.6" rx="3.6"/>
+      </g>
       <text class="wordmark" x="52" y="24">ORDITO</text>
     </svg>
   </div>
@@ -371,17 +428,17 @@ footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}
 <!-- FOOTER -->
 <footer>
   <svg class="logo-svg footer-logo" viewBox="0 0 210 36" height="20" xmlns="http://www.w3.org/2000/svg">
-    <!-- Left pair -->
-    <rect class="bar" x="2" y="3" width="3.5" height="30" rx="1.75"/>
-    <rect class="bar" x="8" y="3" width="3.5" height="30" rx="1.75"/>
-    <!-- Center bar (wider, lighter, tallest) -->
-    <rect class="bar-light" x="15" y="1" width="5.5" height="34" rx="2.75"/>
-    <!-- Right pair -->
-    <rect class="bar" x="24" y="3" width="3.5" height="30" rx="1.75"/>
-    <rect class="bar" x="30" y="3" width="3.5" height="30" rx="1.75"/>
+    <!-- Official Ordito mark (exact brand geometry), scaled to footer height -->
+    <g transform="translate(-1.32,-1.76) scale(0.2125)">
+      <rect class="bar" x="15.6" y="13" width="7.3" height="157.6" rx="3.7"/>
+      <rect class="bar" x="48.0" y="22.2" width="11.0" height="141.5" rx="5.5"/>
+      <rect class="bar-light" x="85.0" y="13" width="14.7" height="160.0" rx="7.3"/>
+      <rect class="bar" x="125.7" y="22.2" width="11.0" height="141.5" rx="5.5"/>
+      <rect class="bar" x="162.0" y="13" width="7.2" height="157.6" rx="3.6"/>
+    </g>
     <text class="wordmark" x="52" y="24">ORDITO</text>
   </svg>
-  <div class="footer-right" data-i18n="footer.rights">© 2026 Ordito. All rights reserved.</div>
+  <div class="footer-right"><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> &nbsp;·&nbsp; <span data-i18n="footer.rights">© 2026 Ordito. All rights reserved.</span></div>
 </footer>
 
 <script>
@@ -431,6 +488,7 @@ const i18n={
     "contact.h2":"Laten we bespreken waar inkoop <em>de meeste waarde</em> kan creëren voor uw onderneming",
     "contact.sub":"Of u nu het potentieel verkent of klaar bent om te handelen — we gaan graag een open gesprek aan over uw inkoopuitdagingen en -kansen.",
     "title.cofounder":"Medeoprichter",
+    "footer.privacy":"Privacybeleid",
     "footer.rights":"© 2026 Ordito. Alle rechten voorbehouden."
   },
   fr:{
@@ -463,30 +521,4 @@ const i18n={
     "svc.1.i1":"Cartographier et harmoniser les données de dépenses et la base fournisseurs de vos différentes entités, et identifier les leviers de valeur à plus fort impact",
     "svc.1.i2":"Challenger les besoins métier, les profils de demande et les spécifications avec les parties prenantes transverses",
     "svc.1.i3":"Mener le sourcing stratégique et les négociations, puis préparer une attribution et une mise en œuvre prêtes à être décidées",
-    "svc.2.h":"Solutions achats","svc.2.sub":"Processus et outils achats",
-    "svc.2.i1":"Centraliser et visualiser clairement les données de dépenses, de contrats et de spécifications produits au même endroit",
-    "svc.2.i2":"Suivre la conformité contractuelle, les évolutions de prix et la réalisation des économies — repérer les fuites de valeur",
-    "svc.2.i3":"Mettre à disposition un reporting de pilotage pour pérenniser l'impact des achats au-delà du programme",
-    "contact.label":"Contactez-nous",
-    "contact.h2":"Voyons ensemble où les achats peuvent créer <em>le plus de valeur</em> pour votre entreprise",
-    "contact.sub":"Que vous en soyez à explorer le potentiel ou prêt à passer à l'action — nous serons ravis d'échanger ouvertement sur vos enjeux et opportunités achats.",
-    "title.cofounder":"Co-fondateur",
-    "footer.rights":"© 2026 Ordito. Tous droits réservés."
-  }
-};
-const i18nDefaults={};
-document.querySelectorAll('[data-i18n]').forEach(el=>{i18nDefaults[el.getAttribute('data-i18n')]=el.innerHTML});
-function setLang(lang){
-  const dict=lang==='en'?i18nDefaults:i18n[lang];
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const key=el.getAttribute('data-i18n');
-    const val=(dict&&dict[key]!==undefined)?dict[key]:i18nDefaults[key];
-    if(val!==undefined)el.innerHTML=val;
-  });
-  document.documentElement.lang=lang;
-  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.getAttribute('data-lang')===lang));
-}
-document.querySelectorAll('.lang-btn').forEach(b=>{b.addEventListener('click',()=>setLang(b.getAttribute('data-lang')))});
-</script>
-</body>
-</html>
+    "svc.

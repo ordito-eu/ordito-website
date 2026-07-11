@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <title>Ordito</title>
+  <g transform="translate(57.6, 27)">
+    <rect x="15.6" y="13" width="7.3" height="157.6" rx="3.7" fill="#021637"/>
+    <rect x="48.0" y="22.2" width="11.0" height="141.5" rx="5.5" fill="#021637"/>
+    <rect x="85.0" y="13" width="14.7" height="160.0" rx="7.3" fill="#5E77D4"/>
+    <rect x="125.7" y="22.2" width="11.0" height="141.5" rx="5.5" fill="#021637"/>
+    <rect x="162.0" y="13" width="7.2" height="157.6" rx="3.6" fill="#021637"/>
+  </g>
+  <text x="151.5" y="264" text-anchor="middle" font-family="Arial,sans-serif" font-size="42" font-weight="700" letter-spacing="3" fill="#021637">ORDITO</text>
+</svg>
