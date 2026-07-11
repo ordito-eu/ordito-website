@@ -521,4 +521,33 @@ const i18n={
     "svc.1.i1":"Cartographier et harmoniser les données de dépenses et la base fournisseurs de vos différentes entités, et identifier les leviers de valeur à plus fort impact",
     "svc.1.i2":"Challenger les besoins métier, les profils de demande et les spécifications avec les parties prenantes transverses",
     "svc.1.i3":"Mener le sourcing stratégique et les négociations, puis préparer une attribution et une mise en œuvre prêtes à être décidées",
-    "svc.
+    "svc.2.h":"Solutions achats","svc.2.sub":"Processus et outils achats",
+    "svc.2.i1":"Centraliser et visualiser clairement les données de dépenses, de contrats et de spécifications produits au même endroit",
+    "svc.2.i2":"Suivre la conformité contractuelle, les évolutions de prix et la réalisation des économies — repérer les fuites de valeur",
+    "svc.2.i3":"Mettre à disposition un reporting de pilotage pour pérenniser l'impact des achats au-delà du programme",
+    "contact.label":"Contactez-nous",
+    "contact.h2":"Voyons ensemble où les achats peuvent créer <em>le plus de valeur</em> pour votre entreprise",
+    "contact.sub":"Que vous en soyez à explorer le potentiel ou prêt à passer à l'action — nous serons ravis d'échanger ouvertement sur vos enjeux et opportunités achats.",
+    "title.cofounder":"Co-fondateur",
+    "footer.privacy":"Politique de confidentialité",
+    "footer.rights":"© 2026 Ordito. Tous droits réservés."
+  }
+};
+const i18nDefaults={};
+document.querySelectorAll('[data-i18n]').forEach(el=>{i18nDefaults[el.getAttribute('data-i18n')]=el.innerHTML});
+function setLang(lang){
+  const dict=lang==='en'?i18nDefaults:i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    const val=(dict&&dict[key]!==undefined)?dict[key]:i18nDefaults[key];
+    if(val!==undefined)el.innerHTML=val;
+  });
+  document.documentElement.lang=lang;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.getAttribute('data-lang')===lang));
+  try{localStorage.setItem('ordito-lang',lang)}catch(e){}
+}
+document.querySelectorAll('.lang-btn').forEach(b=>{b.addEventListener('click',()=>setLang(b.getAttribute('data-lang')))});
+try{const saved=localStorage.getItem('ordito-lang');if(saved&&saved!=='en'&&i18n[saved])setLang(saved)}catch(e){}
+</script>
+</body>
+</html>
