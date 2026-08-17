@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
   <title>Ordito</title>
-  <rect width="300" height="300" fill="#021637"/>
+  <rect width="300" height="300" rx="52" fill="#FAF9F7"/>
   <g transform="translate(2.14,1.2) scale(1.6)">
-    <rect x="15.6" y="13" width="7.3" height="157.6" rx="3.7" fill="#5E77D4"/>
-    <rect x="48.0" y="22.2" width="11.0" height="141.5" rx="5.5" fill="#5E77D4"/>
-    <rect x="85.0" y="13" width="14.7" height="160.0" rx="7.3" fill="#899BF4"/>
-    <rect x="125.7" y="22.2" width="11.0" height="141.5" rx="5.5" fill="#5E77D4"/>
-    <rect x="162.0" y="13" width="7.2" height="157.6" rx="3.6" fill="#5E77D4"/>
+    <rect x="15.6" y="13" width="7.3" height="157.6" rx="3.7" fill="#021637"/>
+    <rect x="48.0" y="22.2" width="11.0" height="141.5" rx="5.5" fill="#021637"/>
+    <rect x="85.0" y="13" width="14.7" height="160.0" rx="7.3" fill="#4257B8"/>
+    <rect x="125.7" y="22.2" width="11.0" height="141.5" rx="5.5" fill="#021637"/>
+    <rect x="162.0" y="13" width="7.2" height="157.6" rx="3.6" fill="#021637"/>
   </g>
 </svg>
