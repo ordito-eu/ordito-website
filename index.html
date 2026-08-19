@@ -239,9 +239,10 @@ section{position:relative}
 .people-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
 .person{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:2rem 2.25rem;transition:all .45s var(--ease)}
 .person:hover{border-color:var(--line-accent);transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.avatar{width:76px;height:76px;border-radius:50%;margin-bottom:1.1rem;overflow:hidden;background:var(--accent-soft);box-shadow:0 0 0 1px var(--line-accent),0 6px 16px -10px rgba(2,22,55,.45)}
+.person-head{display:flex;align-items:center;gap:1.4rem;margin-bottom:1.3rem}
+.avatar{width:140px;height:140px;flex-shrink:0;border-radius:50%;overflow:hidden;background:var(--accent-soft);box-shadow:0 0 0 1px var(--line-accent),0 10px 26px -14px rgba(2,22,55,.5)}
 .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-.person h3{font-size:1.11rem;font-weight:500;margin-bottom:.15rem;color:var(--navy)}
+.person h3{font-size:1.18rem;font-weight:500;margin-bottom:.2rem;color:var(--navy)}
 .person .role{font-size:0.87rem;color:var(--accent);margin-bottom:1rem;font-weight:400;letter-spacing:.02em}
 .person p{font-size:0.92rem;color:var(--muted);line-height:1.8;font-weight:300}
 
@@ -293,8 +294,9 @@ footer{border-top:1px solid var(--line);padding:2.5rem 3rem;display:flex;justify
 .svc-card .svc-sub{margin-bottom:1.1rem}
 .person{padding:1.6rem 1.8rem}
 .person p{line-height:1.62}
-.person-contact{margin-top:.8rem;padding-top:.8rem;gap:.45rem}
-.avatar{width:62px;height:62px;margin-bottom:.75rem}
+.person-contact{margin-top:.85rem;padding-top:.85rem;gap:.45rem}
+.avatar{width:118px;height:118px}
+.person-head{gap:1.1rem;margin-bottom:1rem}
 .ap-scroll{padding:.6rem 0 2.4rem}
 .ap-phases{margin-bottom:.6rem}
 .ap-step{padding:1.05rem 1.25rem}
@@ -326,7 +328,8 @@ footer{border-top:1px solid var(--line);padding:2.5rem 3rem;display:flex;justify
 .pillar-hl{font-size:.9rem}
 .svc-item p{font-size:.9rem;line-height:1.55}
 .person p{font-size:.9rem;line-height:1.5}
-.avatar{width:58px;height:58px;margin-bottom:.65rem}
+.avatar{width:104px;height:104px}
+.person-head{gap:1rem;margin-bottom:.85rem}
 .person-contact{margin-top:.7rem;padding-top:.7rem;gap:.4rem}
 .ap-step h4{font-size:1rem}
 .ap-step{padding:.95rem 1.15rem}
@@ -346,6 +349,7 @@ footer{border-top:1px solid var(--line);padding:2.5rem 3rem;display:flex;justify
 .fit-grid{grid-template-columns:1fr;gap:1.5rem}
 .val-grid{grid-template-columns:1fr}
 .people-grid{grid-template-columns:1fr}
+.avatar{width:124px;height:124px}
 /* approach timeline stacks below 900px */
 .ap-scroll{padding:.5rem 0 4.5rem}
 .ap-phases{display:flex;flex-direction:column;align-items:flex-start;gap:.6rem;margin-bottom:1.5rem}
@@ -689,9 +693,13 @@ html{scroll-behavior:auto}
     <p class="sec-sub reveal reveal-d2" style="max-width:700px">Ordito was founded in Brussels in 2026. The firm is new; the work behind it is not. A focused 30-minute conversation is enough to tell whether there is a material, actionable opportunity in your third-party spend.</p>
     <div class="people-grid">
       <div class="person reveal reveal-d1">
-        <div class="avatar"><picture><source type="image/webp" srcset="cedrick.webp 1x, cedrick@2x.webp 2x"><img src="cedrick.jpg" srcset="cedrick.jpg 1x, cedrick@2x.jpg 2x" width="76" height="76" loading="lazy" decoding="async" alt="Cedrick Veryser, co-founder of Ordito"></picture></div>
-        <h3>Cedrick Veryser</h3>
-        <div class="role">Co-founder · Brussels · NL / EN</div>
+        <div class="person-head">
+          <div class="avatar"><picture><source type="image/webp" srcset="cedrick.webp 1x, cedrick@2x.webp 2x"><img src="cedrick.jpg" srcset="cedrick.jpg 1x, cedrick@2x.jpg 2x" width="140" height="140" loading="lazy" decoding="async" alt="Cedrick Veryser, co-founder of Ordito"></picture></div>
+          <div>
+            <h3>Cedrick Veryser</h3>
+            <div class="role">Co-founder · Brussels · NL / EN</div>
+          </div>
+        </div>
         <p>Seven years at Kearney, most recently as Principal in the Brussels office, leading procurement and value creation programs for industrial and consumer goods clients across Europe. Deep category experience in chemicals, raw materials, packaging and commodities. PhD in Chemistry from KU Leuven, which gives Ordito real technical depth when challenging specifications and material choices.</p>
         <div class="person-contact">
           <a href="mailto:cedrick.veryser@ordito.eu" class="contact-email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>cedrick.veryser@ordito.eu</a>
@@ -700,9 +708,13 @@ html{scroll-behavior:auto}
         </div>
       </div>
       <div class="person reveal reveal-d2">
-        <div class="avatar"><picture><source type="image/webp" srcset="patrick.webp 1x, patrick@2x.webp 2x"><img src="patrick.jpg" srcset="patrick.jpg 1x, patrick@2x.jpg 2x" width="76" height="76" loading="lazy" decoding="async" alt="Patrick Verheyden, co-founder of Ordito"></picture></div>
-        <h3>Patrick Verheyden</h3>
-        <div class="role">Co-founder · Brussels · FR / EN</div>
+        <div class="person-head">
+          <div class="avatar"><picture><source type="image/webp" srcset="patrick.webp 1x, patrick@2x.webp 2x"><img src="patrick.jpg" srcset="patrick.jpg 1x, patrick@2x.jpg 2x" width="140" height="140" loading="lazy" decoding="async" alt="Patrick Verheyden, co-founder of Ordito"></picture></div>
+          <div>
+            <h3>Patrick Verheyden</h3>
+            <div class="role">Co-founder · Brussels · FR / EN</div>
+          </div>
+        </div>
         <p>Patrick builds the proprietary tooling behind our delivery model and drives Ordito's AI enablement. As a consultant at Kearney, he worked with industrial and food manufacturers across Europe and the Americas, sourcing logistics, raw materials and indirect spend categories. Before that, Patrick worked in venture capital and corporate development at Pernod Ricard in San Francisco and Paris.</p>
         <div class="person-contact">
           <a href="mailto:patrick.verheyden@ordito.eu" class="contact-email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>patrick.verheyden@ordito.eu</a>
