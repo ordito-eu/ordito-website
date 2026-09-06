@@ -235,6 +235,19 @@ section{position:relative}
 .outcome p{font-size:1.08rem;color:var(--navy);font-weight:300;line-height:1.8;max-width:820px}
 .val-foot{font-size:0.92rem;color:var(--label);font-weight:300;margin-top:1.25rem;font-style:italic}
 
+/* CAREERS */
+.job-card{display:flex;justify-content:space-between;align-items:center;gap:2.5rem;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.9rem 2.25rem;text-decoration:none;transition:all .45s var(--ease)}
+.job-card:hover{border-color:var(--line-accent);transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.job-role{font-family:var(--display);font-size:1.55rem;font-weight:400;color:var(--navy);margin-bottom:.75rem;line-height:1.25}
+.job-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.job-card p{font-size:0.95rem;color:var(--muted);font-weight:300;line-height:1.75;max-width:62ch}
+.job-go{display:inline-flex;align-items:center;gap:.55rem;color:var(--accent);font-weight:500;font-size:0.95rem;white-space:nowrap;flex-shrink:0}
+.job-go svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.job-card:hover .job-go svg{transform:translateX(4px)}
+.job-foot{font-size:0.92rem;color:var(--label);font-weight:300;margin-top:1.25rem;font-style:italic}
+.job-foot a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line-accent)}
+.job-foot a:hover{color:var(--accent)}
+
 /* PEOPLE */
 .people-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
 .person{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:2rem 2.25rem;transition:all .45s var(--ease)}
@@ -360,8 +373,12 @@ footer{border-top:1px solid var(--line);padding:2.5rem 3rem;display:flex;justify
 .ap-step h4{min-height:0}
 .ap-gate{padding:1.4rem;background:var(--card);border:1px dashed var(--line-accent);border-radius:8px}
 }
+@media(max-width:900px){
+.job-card{flex-direction:column;align-items:flex-start;gap:1.25rem}
+}
 @media(max-width:768px){
 nav{padding:1rem 1.5rem}
+.job-card{padding:1.6rem 1.5rem}
 nav.scrolled{padding:.75rem 1.5rem}
 .nav-link:not(.nav-cta){display:none}
 .hero{padding:7.5rem 1.5rem 4rem;min-height:auto}
@@ -407,6 +424,7 @@ html{scroll-behavior:auto}
     <a href="#why" class="nav-link">Why Ordito</a>
     <a href="#services" class="nav-link">Services</a>
     <a href="#approach" class="nav-link">Approach</a>
+    <a href="#careers" class="nav-link">Careers</a>
     <a href="#contact" class="nav-link nav-cta">Contact</a>
   </div>
 </nav>
@@ -682,6 +700,32 @@ html{scroll-behavior:auto}
       <p>More than €100 million in negotiated savings across €1.5 billion of spend. Typically 6-12% savings in each category we take on.</p>
     </div>
     <p class="val-foot reveal reveal-d4">Detailed value cases, with the levers used and the results achieved, are shared in a first conversation.</p>
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section id="careers">
+  <div class="sec-inner">
+    <span class="sec-label reveal">Careers</span>
+    <h2 class="sec-h2 reveal reveal-d1">Build the firm <em>with us</em>.</h2>
+    <p class="sec-sub reveal reveal-d2">Ordito is a few months old, with clients signed and most of the company still to be built. We hire people who want that, and who would rather ship something than wait for instructions.</p>
+    <a href="careers.html" class="job-card reveal reveal-d3">
+      <div class="job-main">
+        <div class="job-role">Founder's Associate</div>
+        <div class="job-meta">
+          <span class="chip">Internship</span>
+          <span class="chip">Brussels</span>
+          <span class="chip">6 to 12 months</span>
+          <span class="chip">EUR 3,000 / month</span>
+          <span class="chip">Start as soon as possible</span>
+        </div>
+        <p>Work directly with both founders across the business, with a primary focus on AI and automation to make our project execution sharper, plus real exposure to client delivery and commercial development.</p>
+      </div>
+      <span class="job-go">View the role
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+      </span>
+    </a>
+    <p class="job-foot reveal reveal-d4">No open role that fits? Write to <a href="mailto:patrick.verheyden@ordito.eu">patrick.verheyden@ordito.eu</a> anyway.</p>
   </div>
 </section>
 
