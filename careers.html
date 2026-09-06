@@ -43,7 +43,7 @@
 --measure:900px;
 }
 html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{background:var(--paper);color:var(--body);font-family:var(--body-font);line-height:1.65;-webkit-font-smoothing:antialiased}
+body{background:var(--paper);color:var(--body);font-family:var(--body-font);line-height:1.65;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh}
 ::selection{background:var(--accent);color:#fff}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
@@ -68,17 +68,10 @@ nav.scrolled{padding:.9rem 3rem;background:rgba(250,249,247,.96);border-bottom:1
 .nav-cta:hover{background:var(--accent-deep)}
 
 /* LAYOUT */
-main{max-width:var(--measure);margin:0 auto;padding:8.5rem 2rem 4rem}
-.hero{padding-bottom:2.4rem;border-bottom:1px solid var(--line)}
-.eyebrow{font-size:0.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:1.2rem;display:block}
-h1{font-family:var(--display);font-size:clamp(2.4rem,5vw,3.4rem);font-weight:400;line-height:1.12;letter-spacing:-.02em;color:var(--navy);margin-bottom:1.5rem}
-h1 em{font-style:italic;font-weight:500;color:var(--accent)}
-.lede{font-size:1.1rem;line-height:1.8;color:var(--muted);font-weight:300;max-width:66ch;margin-bottom:1rem}
-.lede:last-child{margin-bottom:0}
-.lede b{color:var(--navy);font-weight:500}
+main{max-width:var(--measure);width:100%;margin:0 auto;padding:8.5rem 2rem 4rem;flex:1}
+.hero{padding-bottom:1rem}
+h1{font-family:var(--display);font-size:clamp(2.1rem,4.2vw,2.9rem);font-weight:400;line-height:1.12;letter-spacing:-.02em;color:var(--navy);margin-bottom:1.9rem}
 
-section{padding:2.8rem 0}
-.sec-label{font-size:0.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:1.4rem;display:block}
 
 /* JOB CARD */
 .job-card{display:flex;justify-content:space-between;align-items:center;gap:2.5rem;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.9rem 2.25rem;text-decoration:none;transition:all .45s var(--ease)}
@@ -93,15 +86,6 @@ section{padding:2.8rem 0}
 .job-foot{font-size:0.95rem;color:var(--label);font-weight:300;margin-top:1.4rem;font-style:italic}
 .job-foot a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line-accent)}
 .job-foot a:hover{color:var(--accent)}
-
-/* WHAT IT IS LIKE */
-.here{background:var(--wash);border:1px solid var(--line-accent);border-radius:18px;padding:1.9rem 2.2rem}
-.here .sec-label{margin-bottom:1rem}
-.dots{list-style:none;max-width:70ch}
-.dots li{position:relative;padding-left:1.35rem;font-size:1.01rem;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:.6rem}
-.dots li:last-child{margin-bottom:0}
-.dots li::before{content:'';position:absolute;left:0;top:.72em;width:7px;height:7px;border-radius:50%;background:var(--accent);opacity:.75}
-.dots li strong{color:var(--navy);font-weight:500}
 
 /* FOOTER */
 footer{border-top:1px solid var(--line);padding:2.5rem 3rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
@@ -120,9 +104,7 @@ nav.scrolled{padding:.75rem 1.5rem}
 .nav-links{gap:1rem}
 .nav-careers{padding:.4rem .85rem;font-size:0.84rem}
 main{padding:6.5rem 1.4rem 3rem}
-section{padding:2.2rem 0}
 .job-card{padding:1.6rem 1.5rem}
-.here{padding:1.6rem 1.4rem}
 footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}
 .footer-right{text-align:center}
 }
@@ -157,14 +139,7 @@ footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}
 <main>
 
   <section class="hero">
-    <span class="eyebrow">Careers</span>
-    <h1>Build the firm <em>with us</em>.</h1>
-    <p class="lede">Ordito is an AI-native consulting and procurement solutions firm in Brussels, unlocking value for mid-sized European industrial companies. We are less than a year old, our first clients are signed, and <b>most of the company is still to be built</b>.</p>
-    <p class="lede">That is the job. If it sounds like the wrong kind of uncertainty, it probably is. If it sounds like the right kind, read on.</p>
-  </section>
-
-  <section id="openings">
-    <span class="sec-label">Open roles</span>
+    <h1>Open roles</h1>
     <a href="founders-associate.html" class="job-card">
       <div class="job-main">
         <div class="job-role">Founder's Associate</div>
@@ -182,18 +157,6 @@ footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}
       </span>
     </a>
     <p class="job-foot">No open role that fits? Write to <a href="mailto:patrick.verheyden@ordito.eu">patrick.verheyden@ordito.eu</a> anyway.</p>
-  </section>
-
-  <section id="here">
-    <div class="here">
-      <span class="sec-label">What working here looks like</span>
-      <ul class="dots">
-        <li><strong>Two founders, and you.</strong> Both from Kearney, both still doing the work themselves.</li>
-        <li><strong>Real clients from week one.</strong> European industrial companies with revenues between EUR 100 million and EUR 1 billion.</li>
-        <li><strong>Tools we build ourselves.</strong> Spend analytics, AI-enabled workflows, and whatever else takes the manual work out of a project.</li>
-        <li><strong>English throughout.</strong> Brussels-based, on site with each other most of the week.</li>
-      </ul>
-    </div>
   </section>
 
 </main>
